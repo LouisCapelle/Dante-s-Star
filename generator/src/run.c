@@ -38,10 +38,9 @@ int gen_perfect(int x, int y)
     return 0;
 }
 
-int gen_normal(int x, int y)
+int gen_normal(int height, int width)
 {
-    maze_t *maze = init_maze(x, y);
-    printf("gen normal");
+    maze_t *maze = init_maze(height, width);
     return 0;
 }
 

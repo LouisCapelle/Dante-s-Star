@@ -16,11 +16,18 @@ void print_error(char *error)
 
 int check_error(int ac, char **av)
 {
-    int a = atoi(av[1]);
-    int b = atoi(av[2]);
+    int a = 0;
+    int b = 0;
 
-    if (ac >= 2 && ac <= 4 && a > 0 && b > 0) {
-        return 0;
+    if (ac == 3) {
+        a = atoi(av[1]);
+        b = atoi(av[2]);
+        if (ac >= 2 && ac <= 4 && a > 0 && b > 0) {
+            return 0;
+        } else {
+            print_error("Can't generate maze.");
+            return 1;
+        }
     } else {
         print_error("Can't generate maze.");
         return 1;
