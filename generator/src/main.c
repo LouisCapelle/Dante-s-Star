@@ -10,7 +10,7 @@
 int main(int ac, char **av)
 {
     if (!check_error(ac, av)) {
-        return run_generator();
+        return run_generator(ac, av);
     } else {
         return 84;
     }
