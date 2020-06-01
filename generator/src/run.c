@@ -7,6 +7,7 @@
 
 #include "my.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 void print_map(char **map)
@@ -20,19 +21,28 @@ void print_map(char **map)
     }
 }
 
-int check_perfect(char *perfect)
+maze_t *init_maze(int x, int y)
 {
+    maze_t *maze = malloc(sizeof(maze_t));
 
+    maze->buffer = NULL;
+    maze->map = NULL;
+    maze->x = x;
+    maze->y = y;
+    return maze;
 }
 
 int gen_perfect(int x, int y)
 {
     printf("gen perfect");
+    return 0;
 }
 
 int gen_normal(int x, int y)
 {
+    maze_t *maze = init_maze(x, y);
     printf("gen normal");
+    return 0;
 }
 
 int run_generator(int ac, char **av)
