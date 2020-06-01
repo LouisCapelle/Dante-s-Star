@@ -10,6 +10,5 @@
 
 int run_generator()
 {
-    printf("bite\n");
     return 0;
 }

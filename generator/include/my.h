@@ -8,7 +8,8 @@
 #ifndef MY_H_
 #define MY_H_
 
-int check_error(int ac);
+int check_error(int ac, char **av);
 int run_generator();
+void print_error(char *error);
 
 #endif /* !MY_H_ */

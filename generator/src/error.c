@@ -6,12 +6,23 @@
 */
 
 #include "my.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int check_error(int ac)
+void print_error(char *error)
 {
-    if (ac >= 3 && ac <= 4) {
+    dprintf(2, "%s\n", error);
+}
+
+int check_error(int ac, char **av)
+{
+    int a = atoi(av[1]);
+    int b = atoi(av[2]);
+
+    if (ac >= 2 && ac <= 3 && a != 0 && b != 0) {
         return 0;
     } else {
+        print_error("Can't generate maze.");
         return 1;
     }
 }
