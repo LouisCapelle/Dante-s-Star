@@ -7,6 +7,7 @@ RM	= rm -f
 SRCS	= ./src/main.c \
 		  ./src/error.c \
 		  ./src/run.c  \
+		  ./src/map.c \
 		  ./src/generator.c \
 
 OBJS	= $(SRCS:.c=.o)

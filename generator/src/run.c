@@ -11,8 +11,18 @@
 #include <string.h>
 #include <time.h>
 
+maze_t *init_generator(maze_t *maze, int x, int y)
+{
+    maze = malloc(sizeof(maze_t));
+    maze->map = get_blank_map(x, y);
+    return maze;
+}
+
 int gen_imperfect(int x, int y)
 {
+    maze_t *maze = init_generator(maze, x, y);
+
+    print_map(maze->map);
     return 0;
 }
 
