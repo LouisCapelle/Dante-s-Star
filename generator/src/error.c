@@ -19,7 +19,7 @@ int check_error(int ac, char **av)
     int a = 0;
     int b = 0;
 
-    if (ac == 3) {
+    if (ac == 3 || ac == 4) {
         a = atoi(av[1]);
         b = atoi(av[2]);
         if (ac >= 2 && ac <= 4 && a > 0 && b > 0) {

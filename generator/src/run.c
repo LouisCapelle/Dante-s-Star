@@ -11,9 +11,13 @@
 #include <string.h>
 #include <time.h>
 
+int gen_imperfect(int x, int y)
+{
+    return 0;
+}
+
 int gen_perfect(int x, int y)
 {
-    printf("gen perfect");
     return 0;
 }
 
@@ -21,9 +25,11 @@ int run_generator(int ac, char **av)
 {
     srand(time(NULL));
     if (ac == 4 && strcmp(av[3], "perfect") == 0) {
-        gen_perfect(atoi(av[1]), atoi(av[2]));
-    } else if (ac == 3) {
-        gen_normal(atoi(av[1]), atoi(av[2]));
+        return gen_perfect(atoi(av[1]), atoi(av[2]));
+    } else if (ac == 4 && strcmp(av[3], "imperfect") == 0) {
+        return gen_imperfect(atoi(av[1]), atoi(av[2]));
+    } else if (ac == 3){
+        return gen_imperfect(atoi(av[1]), atoi(av[2]));
     } else {
         return 84;
     }
